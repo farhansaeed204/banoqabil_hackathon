@@ -1,4 +1,4 @@
-# VerdiScan 🌿
+# Doctor Plant 🌿
 
 AI-powered plant health analysis. Upload a photo of a plant, fruit, flower, or tree and get an instant health report: disease detection, treatment plan, recovery estimate, and a RAG chatbot to ask follow-up questions.
 

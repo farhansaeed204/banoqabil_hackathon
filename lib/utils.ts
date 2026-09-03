@@ -87,7 +87,7 @@ export interface AnalysisRecord {
   createdAt: number;
 }
 
-const STORAGE_KEY = "verdisan_history";
+const STORAGE_KEY = "doctor_plant_history";
 
 export function saveAnalysis(record: AnalysisRecord): void {
   try {

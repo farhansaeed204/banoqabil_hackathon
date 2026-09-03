@@ -46,7 +46,7 @@ export default function AnalyzePage() {
   useEffect(() => {
     (async () => {
       try {
-        const raw = localStorage.getItem("verdisan_history");
+        const raw = localStorage.getItem("doctor_plant_history");
         const list: Record[] = raw ? JSON.parse(raw) : [];
         const found = list.find((r) => r.id === id);
         if (found) {
@@ -106,13 +106,13 @@ export default function AnalyzePage() {
 
     const url = publicUrl;
     const text = parsed
-      ? `VerdiScan report — ${parsed.plantName}: ${parsed.healthStatus}. ${parsed.summary}`
-      : "VerdiScan plant health report";
+      ? `Doctor Plant report — ${parsed.plantName}: ${parsed.healthStatus}. ${parsed.summary}`
+      : "Doctor Plant health report";
 
     // 2. Native share sheet (best on mobile) — shares image + text + link.
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
-        const shareData: ShareData = { title: "VerdiScan Report", text, url };
+        const shareData: ShareData = { title: "Doctor Plant Report", text, url };
         // Attach the image file when available for a richer share.
         if (record?.image) {
           try {

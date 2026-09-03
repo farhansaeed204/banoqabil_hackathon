@@ -13,7 +13,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "VerdiScan — Plant Health Analysis",
+  title: "Doctor Plant — AI Plant Health Analysis",
   description:
     "Upload a plant, fruit, flower or tree image and get an instant AI health report, disease diagnosis and treatment plan.",
 };

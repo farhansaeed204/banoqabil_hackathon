@@ -80,7 +80,7 @@ export default function ChatPanel({
     <div className="card flex h-[500px] flex-col overflow-hidden">
       <div className="flex items-center gap-2 border-b border-border px-4 py-3">
         <Bot className="h-5 w-5 text-primary" />
-        <span className="font-semibold">VerdiScan Assistant</span>
+        <span className="font-semibold">Doctor Plant Assistant</span>
         <span className="ml-auto inline-flex items-center gap-1 text-xs text-muted-c">
           <Sparkles className="h-3.5 w-3.5" />
           {analysisId ? "Talking about your plant" : "General plant care"}

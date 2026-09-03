@@ -88,9 +88,9 @@ export default function HomePage() {
         analysis,
         createdAt: Date.now(),
       };
-      const existing = JSON.parse(localStorage.getItem("verdisan_history") || "[]");
+      const existing = JSON.parse(localStorage.getItem("doctor_plant_history") || "[]");
       existing.push(record);
-      localStorage.setItem("verdisan_history", JSON.stringify(existing.slice(-8)));
+      localStorage.setItem("doctor_plant_history", JSON.stringify(existing.slice(-8)));
 
       router.push(`/analyze/${id}?demo=${String(Boolean(demo))}`);
     } catch (err) {
@@ -122,8 +122,8 @@ export default function HomePage() {
             <span className="text-primary">Upload a photo to find out.</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-c">
-            Snap any plant, fruit, flower or tree. VerdiScan identifies it, checks
-            its health, spots diseases, and gives you a treatment plan with
+            Snap any plant, fruit, flower or tree. Doctor Plant identifies it,
+            checks its health, spots diseases, and gives you a treatment plan with
             recovery estimates — in seconds.
           </p>
 
@@ -251,7 +251,7 @@ export default function HomePage() {
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-muted-c">
             Crop failure often starts with a small problem you can&apos;t see.
-            VerdiScan gives you answers you can act on today.
+            Doctor Plant gives you answers you can act on today.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             <div className="card p-6">
@@ -307,7 +307,7 @@ export default function HomePage() {
           <div className="card card-organic p-6">
             <div className="flex items-center gap-2 border-b border-border pb-3">
               <Bot className="h-5 w-5 text-primary" />
-              <span className="font-semibold">VerdiScan Assistant</span>
+              <span className="font-semibold">Doctor Plant Assistant</span>
             </div>
             <div className="mt-4 space-y-3 text-sm">
               <div className="rounded-2xl rounded-tl-sm bg-muted p-3">
