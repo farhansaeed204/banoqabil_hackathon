@@ -34,6 +34,7 @@ export default function AnalyzePage() {
 
   const [record, setRecord] = useState<Record | null>(null);
   const [parsed, setParsed] = useState<PlantAnalysis | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
   const [sharedUrl, setSharedUrl] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -52,6 +53,7 @@ export default function AnalyzePage() {
         if (found) {
           setRecord({ ...found, image: found.image });
           setParsed(validateAnalysis(found.analysis));
+          setIsLoading(false);
           return;
         }
       } catch {
@@ -73,6 +75,8 @@ export default function AnalyzePage() {
         }
       } catch {
         /* ignore */
+      } finally {
+        setIsLoading(false);
       }
     })();
   }, [id]);
@@ -141,6 +145,15 @@ export default function AnalyzePage() {
       window.prompt("Copy this report link:", url);
     }
   };
+
+  if (isLoading) {
+    return (
+      <main className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-24 text-center">
+        <Leaf className="h-10 w-10 animate-pulse text-primary" />
+        <p className="text-sm text-muted-c">Loading report…</p>
+      </main>
+    );
+  }
 
   if (!record || !parsed) {
     return (
