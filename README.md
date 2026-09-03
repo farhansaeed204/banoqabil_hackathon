@@ -35,8 +35,8 @@ Copy `.env.local.example` to `.env.local` and fill in your keys:
 
 | Variable | Purpose |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL (`https://<ref>.supabase.co`) |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase **publishable** key (browser-safe) |
+| `SUPABASE_URL` | Supabase project URL (`https://<ref>.supabase.co`) — server-only |
+| `SUPABASE_ANON_KEY` | Supabase **publishable** key — server-only |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase **secret** key (server-only, never in client) |
 | `GEMINI_API_KEY` / `_2` / `_3` | Google Gemini API keys (optional; round-robin for rate limits) |
 
